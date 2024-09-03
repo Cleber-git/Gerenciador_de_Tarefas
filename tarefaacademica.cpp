@@ -1,3 +1,3 @@
 #include "tarefaacademica.h"
 
-TarefaAcademica::TarefaAcademica() {}
+TarefaAcademica::TarefaAcademica(){}

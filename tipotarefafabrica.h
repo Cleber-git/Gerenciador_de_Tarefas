@@ -1,9 +1,9 @@
 #ifndef TIPOTAREFAABSTRATA_H
 #define TIPOTAREFAABSTRATA_H
 
-#endif // TIPOTAREFAABSTRATA_H
+#include "tarefa.h"
 
-class TipoTarefaFabrica{
+class TipoTarefaFabrica: public Tarefas{
 
 
 public:
@@ -12,6 +12,7 @@ public:
         PROFISSIONAL,
         ACADEMICA
     };
-    virtual void criarTarefa(TAREFA type);
+    virtual Tarefas criarTarefa(TAREFA type);
 
 };
+#endif // TIPOTAREFAABSTRATA_H
