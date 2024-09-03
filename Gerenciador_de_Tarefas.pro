@@ -11,20 +11,24 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    tarefaacademica.cpp \
-    tarefapessoal.cpp \
-    tarefaprofissional.cpp
+    switchthetypetask.cpp \
+    FabricaTarefas/Dependencias/tarefaacademica.cpp \
+    FabricaTarefas/Dependencias/tarefapessoal.cpp \
+    FabricaTarefas/Dependencias/tarefaprofissional.cpp \
+    FabricaTarefas/tipotarefafabrica.cpp
 
 HEADERS += \
     mainwindow.h \
-    tarefa.h \
-    tarefaacademica.h \
-    tarefapessoal.h \
-    tarefaprofissional.h \
-    tipotarefafabrica.h
+    switchthetypetask.h \
+    FabricaTarefas/Dependencias/tarefa.h \
+    FabricaTarefas/Dependencias/tarefaprofissional.h \
+    FabricaTarefas/Dependencias/tarefapessoal.h \
+    FabricaTarefas/Dependencias/tarefaacademica.h \
+    FabricaTarefas/tipotarefafabrica.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    switchthetypetask.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
