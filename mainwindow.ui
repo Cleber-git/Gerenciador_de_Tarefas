@@ -30,7 +30,8 @@
      <string notr="true">border-image: none ;
 color: black ;
 background-color: rgb(255, 242, 193);
-border-radius: 12px ;</string>
+border-radius: 12px ;
+font-weight: bold ;</string>
     </property>
     <property name="text">
      <string>Novo</string>

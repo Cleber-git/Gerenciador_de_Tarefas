@@ -10,10 +10,18 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    tarefaacademica.cpp \
+    tarefapessoal.cpp \
+    tarefaprofissional.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    tarefa.h \
+    tarefaacademica.h \
+    tarefapessoal.h \
+    tarefaprofissional.h \
+    tipotarefafabrica.h
 
 FORMS += \
     mainwindow.ui
