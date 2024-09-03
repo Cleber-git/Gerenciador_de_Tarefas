@@ -1,3 +1,18 @@
 #include "tarefaacademica.h"
 
-TarefaAcademica::TarefaAcademica() {}
+#include <QDebug>
+
+TarefaAcademica::TarefaAcademica(){
+    qDebug() << "Chamei o construtor de Tarefa Acadêmica";
+}
+void TarefaAcademica::setInfoTarefa(){
+
+}
+
+void TarefaAcademica::setDataVencimento(){
+
+}
+
+void TarefaAcademica::setPrioridade(){
+
+}

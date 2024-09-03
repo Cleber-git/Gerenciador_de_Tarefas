@@ -3,6 +3,11 @@
 
 #include <QMainWindow>
 
+#include "switchthetypetask.h"
+#include "tarefa.h"
+#include "tipotarefafabrica.h"
+
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -19,8 +24,14 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+public slots:
+    void on_receive_typeTask(QString);
 
 private:
     Ui::MainWindow *ui;
+    SwitchTheTypeTask *m_switchType = new SwitchTheTypeTask();
+    QString m_typeOfTask;
+    Tarefa *m_tarefa;
+    TipoTarefaFabrica m_tipoTarefaFabrica;
 };
 #endif // MAINWINDOW_H

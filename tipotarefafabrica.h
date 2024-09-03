@@ -1,17 +1,19 @@
 #ifndef TIPOTAREFAABSTRATA_H
 #define TIPOTAREFAABSTRATA_H
 
-#endif // TIPOTAREFAABSTRATA_H
+#include "tarefaacademica.h"
+#include "tarefapessoal.h"
+#include "tarefaprofissional.h"
 
 class TipoTarefaFabrica{
-
-
 public:
+    TipoTarefaFabrica();
     enum class TAREFA{
         PESSOAL,
         PROFISSIONAL,
         ACADEMICA
     };
-    virtual void criarTarefa(TAREFA type);
+    Tarefa* criarTarefa(TAREFA type);
 
 };
+#endif // TIPOTAREFAABSTRATA_H
