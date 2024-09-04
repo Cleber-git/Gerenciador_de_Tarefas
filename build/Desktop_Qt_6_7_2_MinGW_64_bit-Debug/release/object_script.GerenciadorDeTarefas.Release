@@ -1,0 +1,13 @@
+release/contenttask.o
+release/db_sqlite.o
+release/main.o
+release/mainwindow.o
+release/switchthetypetask.o
+release/tarefaacademica.o
+release/tarefapessoal.o
+release/tarefaprofissional.o
+release/tipotarefafabrica.o
+release/qrc_rsc.o
+release/moc_contenttask.o
+release/moc_mainwindow.o
+release/moc_switchthetypetask.o
