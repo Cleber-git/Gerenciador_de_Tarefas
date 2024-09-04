@@ -1,5 +1,6 @@
 #include "tarefaacademica.h"
 
+
 #include <QDebug>
 
 TarefaAcademica::TarefaAcademica(){

@@ -36,3 +36,5 @@ void MainWindow::on_receive_typeTask(QString _TypeTask){
         m_tarefa = m_tipoTarefaFabrica.criarTarefa(TipoTarefaFabrica::TAREFA::ACADEMICA);
     }
 }
+
+

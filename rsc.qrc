@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/ferramentas">
         <file>pexels-rdne-8581047.jpg</file>
+        <file>#f8c7c7.png</file>
     </qresource>
 </RCC>

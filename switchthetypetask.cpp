@@ -16,6 +16,7 @@ SwitchTheTypeTask::~SwitchTheTypeTask()
 void SwitchTheTypeTask::on_pushButton_clicked()
 {
     emit sendTypeTask(ui->comboBox->currentText());
+    m_contentTask->show();
     destroy();
 }
 

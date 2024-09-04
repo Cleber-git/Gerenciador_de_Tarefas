@@ -1,9 +1,11 @@
 #ifndef TIPOTAREFAABSTRATA_H
 #define TIPOTAREFAABSTRATA_H
 
+
+#include "FabricaTarefas/Dependencias/tarefaprofissional.h"
 #include "tarefaacademica.h"
 #include "tarefapessoal.h"
-#include "tarefaprofissional.h"
+#include "tarefa.h"
 
 class TipoTarefaFabrica{
 public:
@@ -13,6 +15,7 @@ public:
         PROFISSIONAL,
         ACADEMICA
     };
+
     Tarefa* criarTarefa(TAREFA type);
 
 };

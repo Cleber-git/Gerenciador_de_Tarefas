@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+#include "contenttask.h"
+
 namespace Ui {
 class SwitchTheTypeTask;
 }
@@ -21,6 +23,7 @@ private slots:
 
 private:
     Ui::SwitchTheTypeTask *ui;
+    ContentTask * m_contentTask = new ContentTask();
 };
 
 #endif // SWITCHTHETYPETASK_H

@@ -37,7 +37,8 @@ public:
         pushButton->setStyleSheet(QString::fromUtf8("border-image: none ;\n"
 "color: black ;\n"
 "background-color: rgb(255, 242, 193);\n"
-"border-radius: 12px ;"));
+"border-radius: 12px ;\n"
+"font-weight: bold ;"));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);

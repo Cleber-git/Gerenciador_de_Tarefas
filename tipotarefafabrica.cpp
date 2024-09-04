@@ -22,3 +22,5 @@ Tarefa *TipoTarefaFabrica::criarTarefa(TAREFA type){
     }
 }
 
+
+
