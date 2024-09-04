@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 11.0.2, 2024-09-02T23:22:09. -->
+<!-- Written by QtCreator 11.0.2, 2024-09-03T23:48:18. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -255,10 +255,12 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="bool" key="PE.EnvironmentAspect.PrintOnRun">false</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey"></value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/cleber/Documentos/Projects/Gerenciador_de_Tarefas/Gerenciador_de_Tarefas.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/cleber/Documentos/Projects/Gerenciador_de_Tarefas/Gerenciador_de_Tarefas.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
+    <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/cleber/Documentos/Projects/build-Gerenciador_de_Tarefas-Qt_6_5_1_gcc_64-Debug</value>
    </valuemap>
    <value type="qlonglong" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
