@@ -1,5 +1,8 @@
 #include "tipotarefafabrica.h"
-
+#include "FabricaTarefas/Dependencias/tarefa.h"
+#include "FabricaTarefas/Dependencias/tarefaacademica.h"
+#include "FabricaTarefas/Dependencias/tarefapessoal.h"
+#include "FabricaTarefas/Dependencias/tarefaprofissional.h"
 
 #include <QString>
 

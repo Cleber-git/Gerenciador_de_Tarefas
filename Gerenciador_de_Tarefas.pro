@@ -15,7 +15,6 @@ SOURCES += \
     db/db_sqlite.cpp \
     main.cpp \
     mainwindow.cpp \
-    switchthetypetask.cpp \
     FabricaTarefas/Dependencias/tarefaacademica.cpp \
     FabricaTarefas/Dependencias/tarefapessoal.cpp \
     FabricaTarefas/Dependencias/tarefaprofissional.cpp \
@@ -27,7 +26,6 @@ HEADERS += \
     db/db_sqlite.h \
     db/abstract/db_acess_abstract.h  \
     mainwindow.h \
-    switchthetypetask.h \
     FabricaTarefas/Dependencias/tarefa.h \
     FabricaTarefas/Dependencias/tarefaprofissional.h \
     FabricaTarefas/Dependencias/tarefapessoal.h \
@@ -36,8 +34,7 @@ HEADERS += \
 
 FORMS += \
     contenttask.ui \
-    mainwindow.ui \
-    switchthetypetask.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
