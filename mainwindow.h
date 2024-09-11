@@ -3,9 +3,10 @@
 
 #include <QMainWindow>
 
-#include "switchthetypetask.h"
 #include "tarefa.h"
-#include "tipotarefafabrica.h"
+#include "FabricaTarefas/tipotarefafabrica.h"
+#include "contenttask.h"
+
 
 
 QT_BEGIN_NAMESPACE
@@ -21,17 +22,16 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+public slots:
+    void receiveType(TipoTarefaFabrica::TAREFA);
 private slots:
     void on_pushButton_clicked();
-public slots:
-    void on_receive_typeTask(QString);
-
 private:
     Ui::MainWindow *ui;
-    SwitchTheTypeTask *m_switchType = new SwitchTheTypeTask();
     QString m_typeOfTask;
     Tarefa *m_tarefa;
-    TipoTarefaFabrica m_tipoTarefaFabrica;
+    TipoTarefaFabrica *m_tipoTarefaFabrica;
+
+    ContentTask *m_contentTask = new ContentTask();
 };
 #endif // MAINWINDOW_H

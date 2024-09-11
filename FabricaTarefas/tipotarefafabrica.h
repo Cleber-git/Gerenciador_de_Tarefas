@@ -2,10 +2,10 @@
 #define TIPOTAREFAABSTRATA_H
 
 
-#include "Dependencias/tarefaacademica.h"
-#include "Dependencias/tarefapessoal.h"
-#include "Dependencias/tarefaprofissional.h"
-#include "tarefa.h"
+#include "FabricaTarefas/Dependencias/tarefaacademica.h"
+#include "FabricaTarefas/Dependencias/tarefapessoal.h"
+#include "FabricaTarefas/Dependencias/tarefaprofissional.h"
+#include "FabricaTarefas/Dependencias/tarefa.h"
 
 class TipoTarefaFabrica{
 public:
