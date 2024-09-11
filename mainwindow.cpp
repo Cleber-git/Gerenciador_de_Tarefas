@@ -8,7 +8,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     connect(m_switchType, SIGNAL(sendTypeTask(QString)), this, SLOT(on_receive_typeTask(QString)));
 }
 
@@ -36,5 +35,3 @@ void MainWindow::on_receive_typeTask(QString _TypeTask){
         m_tarefa = m_tipoTarefaFabrica.criarTarefa(TipoTarefaFabrica::TAREFA::ACADEMICA);
     }
 }
-
-

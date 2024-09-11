@@ -19,4 +19,3 @@ void SwitchTheTypeTask::on_pushButton_clicked()
     m_contentTask->show();
     destroy();
 }
-
