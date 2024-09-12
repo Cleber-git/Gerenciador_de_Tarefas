@@ -1,8 +1,5 @@
 #include "tipotarefafabrica.h"
-#include "FabricaTarefas/Dependencias/tarefa.h"
-#include "FabricaTarefas/Dependencias/tarefaacademica.h"
-#include "FabricaTarefas/Dependencias/tarefapessoal.h"
-#include "FabricaTarefas/Dependencias/tarefaprofissional.h"
+
 
 #include <QString>
 
@@ -11,15 +8,20 @@ TipoTarefaFabrica::TipoTarefaFabrica(){
 }
 
 Tarefa *TipoTarefaFabrica::criarTarefa(TAREFA type){
+    Tarefa *instance;
     switch(type){
     case TAREFA::ACADEMICA:
-        return new TarefaAcademica();
+        instance = new TarefaAcademica();
+        break;
     case TAREFA::PESSOAL:
-        return new TarefaPessoal();
+        instance = new TarefaPessoal();
+        break;
     case TAREFA::PROFISSIONAL:
-        return new TarefaProfissional();
+        instance = new TarefaProfissional();
+        break;
     default:
-        return nullptr;
+        instance = nullptr;
     }
+    return instance;
 }
 

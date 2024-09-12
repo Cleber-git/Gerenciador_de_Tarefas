@@ -19,7 +19,7 @@
   <widget class="QLineEdit" name="lineTitulo">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>80</x>
      <y>210</y>
      <width>161</width>
      <height>28</height>
@@ -32,7 +32,7 @@
   <widget class="QDateEdit" name="datePrazo">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>80</x>
      <y>450</y>
      <width>161</width>
      <height>29</height>
@@ -73,7 +73,7 @@
   <widget class="QTextEdit" name="textCorpo">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>80</x>
      <y>310</y>
      <width>161</width>
      <height>91</height>
@@ -102,7 +102,7 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>80</x>
      <y>190</y>
      <width>41</width>
      <height>20</height>
@@ -118,7 +118,7 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>80</x>
      <y>290</y>
      <width>51</width>
      <height>20</height>
@@ -134,7 +134,7 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>80</x>
      <y>430</y>
      <width>63</width>
      <height>20</height>
@@ -151,7 +151,7 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>520</y>
+     <y>500</y>
      <width>88</width>
      <height>26</height>
     </rect>

@@ -30,6 +30,7 @@ private:
     Ui::MainWindow *ui;
     QString m_typeOfTask;
     Tarefa *m_tarefa;
+    TipoTarefaFabrica *m_tipoTarefaFabrica;
 
     ContentTask *m_contentTask = new ContentTask();
 };

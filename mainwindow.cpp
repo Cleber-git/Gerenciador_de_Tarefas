@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
+#include "FabricaTarefas/tipotarefafabrica.h"
 
 
 
@@ -9,8 +10,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
     connect(m_contentTask, SIGNAL(sendType(QString)), this, SLOT());
-//    connect(m_switchType, SIGNAL(sendTypeTask(QString)), this, SLOT(on_receive_typeTask(QString)));
+
+    m_tipoTarefaFabrica = new TipoTarefaFabrica();
 }
 
 MainWindow::~MainWindow()
@@ -27,5 +30,5 @@ void MainWindow::on_pushButton_clicked()
 }
 
 void MainWindow::receiveType(TipoTarefaFabrica::TAREFA _type){
-    TipoTarefaFabrica &m_tipoTarefaFabrica= TipoTarefaFabrica::criarTarefa(_type);
+     m_tipoTarefaFabrica->criarTarefa(_type);
 }
