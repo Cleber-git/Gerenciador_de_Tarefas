@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+<<<<<<< HEAD
 <!-- Written by QtCreator 14.0.1, 2024-09-11T17:06:45. -->
+=======
+<<<<<<< HEAD
+<!-- Written by QtCreator 11.0.2, 2024-09-10T15:21:16. -->
+=======
+<<<<<<< HEAD
+<!-- Written by QtCreator 14.0.1, 2024-09-09T17:02:04. -->
+>>>>>>> aa5d97776ede90a7bd0984f885f1011e3b8dab31
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
   <value type="QByteArray">{01e0c2e1-e154-4424-8a0e-144f2ba692a4}</value>
+<<<<<<< HEAD
+=======
+=======
+<!-- Written by QtCreator 11.0.2, 2024-09-06T01:09:55. -->
+>>>>>>> 523cc3ba3bc99dda83edf4d041f2ec86a7dcad78
+<qtcreator>
+ <data>
+  <variable>EnvironmentId</variable>
+  <value type="QByteArray">{a9eb14a7-5f0c-47a9-b40b-2043f1dbf6d9}</value>
+>>>>>>> 47906f557840796ff04323f2dcfed7518c8701b7
+>>>>>>> aa5d97776ede90a7bd0984f885f1011e3b8dab31
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -238,7 +257,10 @@
     <value type="bool" key="Analyzer.QmlProfiler.Settings.UseGlobalSettings">true</value>
     <value type="int" key="Analyzer.Valgrind.Callgrind.CostFormat">0</value>
     <value type="bool" key="Analyzer.Valgrind.Settings.UseGlobalSettings">true</value>
+<<<<<<< HEAD
+=======
     <value type="QList&lt;int&gt;" key="Analyzer.Valgrind.VisibleErrorKinds"></value>
+>>>>>>> 523cc3ba3bc99dda83edf4d041f2ec86a7dcad78
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>

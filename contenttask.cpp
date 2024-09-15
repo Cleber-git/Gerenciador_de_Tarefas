@@ -11,6 +11,7 @@ ContentTask::ContentTask(QWidget *parent)
     m_db.openConection();
     addComboBox(TipoTarefaFabrica::TAREFA::PESSOAL, ui->cmb_type);
     addComboBox(TipoTarefaFabrica::TAREFA::PESSOAL, ui->cmb_prioridade);
+    connect(ui->cmb_type, SIGNAL(currentTextChanged(QString)), this, SLOT(on_changedComboType(QString)));
 
 }
 
@@ -68,5 +69,80 @@ QVector<QComboBox*> ContentTask::getComboBox(TipoTarefaFabrica::TAREFA _typeComb
     default:
         break;
     }
+}
 
+void ContentTask::selectComboBox(QVector<QComboBox*> _combo){
+    for (int i = 0; i < _combo.size(); i++) {
+        _combo[i]->show();
+    }
+}
+
+void ContentTask::showComboBox(TipoTarefaFabrica::TAREFA _typeCombo){
+    switch (_typeCombo) {
+    case TipoTarefaFabrica::TAREFA::PESSOAL:
+        selectComboBox(m_cmbDefault);
+        break;
+    case TipoTarefaFabrica::TAREFA::PROFISSIONAL:
+        selectComboBox(m_cmbProfissional);
+        break;
+    case TipoTarefaFabrica::TAREFA::ACADEMICA:
+        selectComboBox(m_cmbAcademico);
+        break;
+    default:
+        break;
+    }
+}
+
+
+void ContentTask::on_changedComboType(QString _type){
+    if(_type == "Profissional"){
+        if( m_cmbTypeAcademico != nullptr && !m_cmbTypeAcademico->isHidden()){
+            m_lblTypeAcademico->hide();
+            m_cmbTypeAcademico->hide();
+        }
+        if(m_lblColaboradores ==  nullptr){
+            m_lblColaboradores = new QLabel(this);
+            m_lblColaboradores->setText("Qtd colaboradores:");
+            qDebug()<< "Criei colaboradores";
+
+        }
+        m_lblColaboradores->move(ui->cmb_prioridade->geometry().x(), ui->cmb_prioridade->geometry().y() + 40);
+        if(m_cmbColaboradores == nullptr){
+            m_cmbColaboradores = new QComboBox(this);
+            qDebug()<< "criei box Colaboradores";
+
+        }
+        m_cmbColaboradores->move(m_lblColaboradores->geometry().x(), m_lblColaboradores->geometry().y() + 15);
+        m_cmbColaboradores->addItem("1");
+        m_cmbColaboradores->addItem("2");
+        m_cmbColaboradores->addItem("3");
+        m_cmbColaboradores->addItem("4");
+        m_cmbColaboradores->addItem("5");
+        qDebug()<< "quase o final";
+
+        m_cmbColaboradores->show();
+        m_lblColaboradores->show();
+    }else if(_type == "Acadêmico"){
+        if(m_cmbColaboradores != nullptr &&  !m_cmbColaboradores->isHidden()){
+
+            m_cmbColaboradores->hide();
+            m_lblColaboradores->hide();
+            qDebug()<< "entrei aqui";
+        }
+
+        if(m_lblTypeAcademico == nullptr){
+            m_lblTypeAcademico = new QLabel(this);
+            m_lblTypeAcademico->setText("Tipo de curso:");
+        }
+        m_lblTypeAcademico->move(ui->cmb_prioridade->geometry().x(), ui->cmb_prioridade->geometry().y() + 40);
+        if(m_cmbTypeAcademico == nullptr){
+            m_cmbTypeAcademico = new QComboBox(this);
+        }
+        m_cmbTypeAcademico->move(m_lblTypeAcademico->geometry().x(), m_lblTypeAcademico->geometry().y() + 15);
+        m_cmbTypeAcademico->addItem("Colégio");
+        m_cmbTypeAcademico->addItem("Faculdade");
+        m_cmbTypeAcademico->addItem("Técnico");
+        m_cmbTypeAcademico->show();
+        m_lblTypeAcademico->show();
+    }
 }
