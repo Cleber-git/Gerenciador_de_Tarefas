@@ -28,7 +28,7 @@ void Db_Sqlite::openConection(){
 
 void Db_Sqlite::insertInfo(QString _titulo, QString _corpo, QString _prazo, QString _prioridade, QString _tabela){
     QSqlQuery query;
-        QString sql  = QString("INSERT INTO %1 (titulo, corpo, prazo, prioridade) VALUES (:titulo, :corpo, :prazo, :prioridade)").arg(_tabela);
+    QString sql  = QString("INSERT INTO %1 (titulo, corpo, prazo, prioridade) VALUES (:titulo, :corpo, :prazo, :prioridade)").arg(_tabela);
 
     query.prepare(sql);
     query.bindValue(":titulo", _titulo);

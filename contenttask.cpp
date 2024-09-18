@@ -41,30 +41,29 @@ void ContentTask::on_btnConcluir_clicked()
 void ContentTask::addComboBox(TipoTarefaFabrica::TAREFA _typeCombo, QComboBox* _comboBox){
     switch (_typeCombo) {
     case TipoTarefaFabrica::TAREFA::PESSOAL:
-        m_cmbDefault.push_back(_comboBox);
+        m_ListCmbDefault.push_back(_comboBox);
         break;
     case TipoTarefaFabrica::TAREFA::PROFISSIONAL:
-        m_cmbProfissional.push_back(_comboBox);
+        m_ListCmbProfissional.push_back(_comboBox);
         break;
     case TipoTarefaFabrica::TAREFA::ACADEMICA:
-        m_cmbAcademico.push_back(_comboBox);
+        m_ListCmbAcademico.push_back(_comboBox);
         break;
     default:
         break;
     }
 }
 
-
 QVector<QComboBox*> ContentTask::getComboBox(TipoTarefaFabrica::TAREFA _typeCombo){
     switch (_typeCombo) {
     case TipoTarefaFabrica::TAREFA::PESSOAL:
-        return m_cmbDefault;
+        return m_ListCmbDefault;
         break;
     case TipoTarefaFabrica::TAREFA::PROFISSIONAL:
-        return m_cmbProfissional;
+        return m_ListCmbProfissional;
         break;
     case TipoTarefaFabrica::TAREFA::ACADEMICA:
-        return m_cmbAcademico;
+        return m_ListCmbAcademico;
         break;
     default:
         break;
@@ -80,21 +79,21 @@ void ContentTask::selectComboBox(QVector<QComboBox*> _combo){
 void ContentTask::showComboBox(TipoTarefaFabrica::TAREFA _typeCombo){
     switch (_typeCombo) {
     case TipoTarefaFabrica::TAREFA::PESSOAL:
-        selectComboBox(m_cmbDefault);
+        selectComboBox(m_ListCmbDefault);
         break;
     case TipoTarefaFabrica::TAREFA::PROFISSIONAL:
-        selectComboBox(m_cmbProfissional);
+        selectComboBox(m_ListCmbProfissional);
         break;
     case TipoTarefaFabrica::TAREFA::ACADEMICA:
-        selectComboBox(m_cmbAcademico);
+        selectComboBox(m_ListCmbAcademico);
         break;
     default:
         break;
     }
 }
 
-
 void ContentTask::on_changedComboType(QString _type){
+    // Usuário escolhe tarefa profissional
     if(_type == "Profissional"){
         if( m_cmbTypeAcademico != nullptr && !m_cmbTypeAcademico->isHidden()){
             m_lblTypeAcademico->hide();
@@ -103,14 +102,15 @@ void ContentTask::on_changedComboType(QString _type){
         if(m_lblColaboradores ==  nullptr){
             m_lblColaboradores = new QLabel(this);
             m_lblColaboradores->setText("Qtd colaboradores:");
-            qDebug()<< "Criei colaboradores";
+            qDebug()<< "Criei label colaboradores";
 
         }
         m_lblColaboradores->move(ui->cmb_prioridade->geometry().x(), ui->cmb_prioridade->geometry().y() + 40);
         if(m_cmbColaboradores == nullptr){
             m_cmbColaboradores = new QComboBox(this);
-            qDebug()<< "criei box Colaboradores";
-
+            m_cmbColaboradores->setObjectName("CombobBox de colaboradores");
+            m_ListCmbProfissional.push_back(m_cmbColaboradores);
+            qDebug()<< "criei box Colaboradores: " << m_ListCmbProfissional[0]->objectName();
         }
         m_cmbColaboradores->move(m_lblColaboradores->geometry().x(), m_lblColaboradores->geometry().y() + 15);
         m_cmbColaboradores->addItem("1");
@@ -118,11 +118,14 @@ void ContentTask::on_changedComboType(QString _type){
         m_cmbColaboradores->addItem("3");
         m_cmbColaboradores->addItem("4");
         m_cmbColaboradores->addItem("5");
-        qDebug()<< "quase o final";
 
         m_cmbColaboradores->show();
         m_lblColaboradores->show();
-    }else if(_type == "Acadêmico"){
+        qDebug()<< "final";
+    }
+    // Usuário escolhe tarefa acadêmica
+    else if(_type == "Acadêmico"){
+
         if(m_cmbColaboradores != nullptr &&  !m_cmbColaboradores->isHidden()){
 
             m_cmbColaboradores->hide();
@@ -137,6 +140,7 @@ void ContentTask::on_changedComboType(QString _type){
         m_lblTypeAcademico->move(ui->cmb_prioridade->geometry().x(), ui->cmb_prioridade->geometry().y() + 40);
         if(m_cmbTypeAcademico == nullptr){
             m_cmbTypeAcademico = new QComboBox(this);
+            m_ListCmbAcademico.push_back(m_cmbTypeAcademico);
         }
         m_cmbTypeAcademico->move(m_lblTypeAcademico->geometry().x(), m_lblTypeAcademico->geometry().y() + 15);
         m_cmbTypeAcademico->addItem("Colégio");
@@ -144,5 +148,19 @@ void ContentTask::on_changedComboType(QString _type){
         m_cmbTypeAcademico->addItem("Técnico");
         m_cmbTypeAcademico->show();
         m_lblTypeAcademico->show();
+    }else if(_type == "Pessoal"){
+        qDebug() << "Entrei na pessoal";
+        if(!m_ListCmbProfissional[0]->isHidden()){
+            m_ListCmbProfissional[0]->hide();
+        }
+        if(!m_ListCmbAcademico[0]->isHidden()){
+            m_ListCmbAcademico[0]->hide();
+        }
+        if(!m_lblColaboradores->isHidden()){
+            m_lblColaboradores->hide();
+        }
+        if(!m_lblTypeAcademico->isHidden()){
+            m_lblTypeAcademico->hide();
+        }
     }
 }
